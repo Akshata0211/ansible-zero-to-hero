@@ -62,17 +62,3 @@ Day 9: Ansible Vault for Security
 - Best practices for managing secrets and sensitive data in Ansible.
 
 Day 10: Policy as Code
-
-Day 11: Network Automation using Ansible
-
-Day 12: Ansible Tower Deep Dive
-
-- Understanding Ansible Tower
-- Comparision with Ansible command line and adhoc commands
-- RBAC and Security with Ansible Tower
-
-Day 13: Advanced Ansible Project
-
-- Terraform + Ansible Project
-
-Day 14: Ansible Interview Questions
