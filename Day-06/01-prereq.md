@@ -26,7 +26,11 @@ openssl rand -base64 2048 > vault.pass
 ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass
 ```
 
+3. To run an Ansible playbook using the `inventory.ini` file and automatically decrypt any encrypted variables using the password stored in `vault.pass`.
 
+```
+ ansible-playbook -i inventory.ini 02-playbook.yaml --vault-password-file vault.pass
+```
 
 
 
