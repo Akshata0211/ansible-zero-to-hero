@@ -15,9 +15,3 @@
       - subnet_id: subnet-05868ca254bc6371f
         assign_public_ip: true
     image_id: "{{ img }}"
-  #   tags:
-  #     environment: "{{ item.name }}"
-  # loop:
-  #   - { image: "ami-0e1d06225679bc1c5", name: "manage-node-1" }
-  #   - { image: "ami-0f58b397bc5c1f2e8", name: "manage-node-2" }
-  #   - { image: "ami-0f58b397bc5c1f2e8", name: "manage-node-3" }

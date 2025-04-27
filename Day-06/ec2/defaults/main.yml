@@ -1,5 +1,5 @@
 #SPDX-License-Identifier: MIT-0
 # defaults file for ec2
 ---
-type: t2.micro
+type: t2.medium
 img: ami-084568db4383264d4
