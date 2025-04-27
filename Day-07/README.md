@@ -4,7 +4,7 @@
 
 Create three(3) EC2 instances on AWS using Ansible loops
 - 2 Instances with Ubuntu Distribution
-- 1 Instance with Centos Distribution
+- 1 Instance with Amazon Linux Distribution
 
 Hint: Use `connection: local` on Ansible Control node.
 
@@ -35,20 +35,20 @@ ansible-galaxy collection install amazon.aws
 ## Setup Vault 
 
 1. Create a password for vault
-
 ```
 openssl rand -base64 2048 > vault.pass
 ```
-
 2. Add your AWS credentials using the below vault command
-
 ```
 ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass
 ```
-To run an Ansible playbook and automatically decrypt any encrypted variables using the password stored in `vault.pass`.
 
+To run the `ec2_create.yaml` playbook, use your `inventory.ini` file and decrypt any vault-encrypted variables using the `vault.pass`
 ```
- ansible-playbook ec2_create.yaml --vault-password-file vault.pass
+ ansible-playbook -i inventory.ini ec2_create.yaml --vault-password-file vault.pass
 ```
-ssh-copy-id -f "-o Identityfile keypair.pem" ubuntu@13.201.116.13
 
+This command copies your SSH public key to the EC2 instance using the `keypair.pem` file for authentication.
+```
+ssh-copy-id -f "-o Identityfile <path_to_keypair.pem>" ubuntu@<ec2_public-ip>
+```
