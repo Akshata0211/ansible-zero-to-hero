@@ -4,7 +4,7 @@
 - name: Create EC2 instances
   amazon.aws.ec2_instance:
     name: "ak"
-    #key_name: "abhi-aws-keypair"
+    #key_name: "keypair"
     vpc_subnet_id: subnet-05868ca254bc6371f
     instance_type: "{{ type }}"
     security_group: default
